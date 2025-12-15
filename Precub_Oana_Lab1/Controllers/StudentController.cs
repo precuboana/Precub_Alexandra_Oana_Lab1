@@ -8,6 +8,9 @@ namespace Precub_Oana_Lab1.Controllers
         public IActionResult Info()
         {
             var student = new Student { Name = "Ana", Age = 21 };
+
+            ViewBag.Message = "Mesaj din Controller";
+            ViewData["Time"] = DateTime.Now;
             return View(student);
         }
     }
